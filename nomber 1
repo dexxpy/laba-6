@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	setlocale(0, "");
+
+	int n;
+	int count = 0;
+	int sum = 0;
+
+	do
+	{
+		cin >> n;
+
+		if (n != 0) {
+			count++;
+			sum += n;
+		}
+	} while (n != 0);
+
+	if (count == 0) {
+		cout << "Вы не ввели число";
+		return 0;
+	}
+
+	cout << "Общая сумма чисел: " << sum << endl;
+	cout << "Количество чисел: " << count << endl;
+	cout << "Среднее число: " << sum / count << endl;
+}
